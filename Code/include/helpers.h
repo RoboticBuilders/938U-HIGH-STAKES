@@ -1,1 +1,0 @@
-void color_sort();
