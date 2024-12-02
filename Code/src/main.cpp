@@ -24,7 +24,7 @@ lemlib::TrackingWheel vertical(&verticalEnc, lemlib::Omniwheel::NEW_275, -2.5);
 lemlib::Drivetrain drivetrain(&leftMotors, // left motor group
                               &rightMotors, // right motor group
                               10, // 10 inch track width
-                              lemlib::Omniwheel::NEW_4, // using new 4" omnis
+                              lemlib::Omniwheel::NEW_325, // using new 4" omnis
                               480, // drivetrain rpm is 480
                               2 // horizontal drift is 2. If we had traction wheels, it would have been 8
 );
