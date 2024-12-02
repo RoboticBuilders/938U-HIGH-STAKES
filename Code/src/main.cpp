@@ -8,12 +8,20 @@ pros::Controller controller(pros::E_CONTROLLER_MASTER);
 pros::MotorGroup leftMotors({1, 2, 3}, pros::MotorGearset::blue); // left motor group - ports 1, 2, 3
 pros::MotorGroup rightMotors({4, 5, 6}, pros::MotorGearset::blue); // right motor group - ports 4, 5, 6
 
+// other motors
+pros::Motor intake(11, pros::MotorGearset::blue); // intake
+pros::Motor left_lb(12, pros::MotorGearset::green); // lady brown
+pros::Motor right_lb(13, pros::MotorGearset::green); // lady brown
+
+// sensors
+pros::Optical color_sorter(16); // color sort
+
 // imu
 pros::Imu imu(10); // port 10
 
 // tracking wheels
-pros::Rotation horizontalEnc(13); // horizontal encoder port 13
-pros::Rotation verticalEnc(14); // vertical encoderport 14
+pros::Rotation horizontalEnc(14); // horizontal encoder port 13
+pros::Rotation verticalEnc(15); // vertical encoderport 14
 
 // horizontal tracking wheel. 2.75" diameter, TODO: Add offsets
 lemlib::TrackingWheel horizontal(&horizontalEnc, lemlib::Omniwheel::NEW_275, -5.75);
